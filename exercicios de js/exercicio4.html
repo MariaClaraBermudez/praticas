@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 4</title>
+</head>
+<body>
+    <script>
+        function numeroAleatorio(min, max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+           
+        } 
+        const numero = numeroAleatorio(1,10)
+        console.log(numero);
+
+        let numeroEscolhido = prompt('Escolha um numero de 1 a 10');
+        numeroEscolhido = parseInt(numeroEscolhido); // Converta a entrada para um número
+
+        function advinhar(numeroEscolhido){
+            while (numeroEscolhido !== numero) {
+                numeroEscolhido = parseInt(prompt('Tente novamente. Escolha um numero de 1 a 10'));
+            }
+            console.log("Acertou!");
+        } 
+
+        advinhar(numeroEscolhido); 
+         
+
+    </script>
+</body>
+</html>
